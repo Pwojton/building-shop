@@ -33,7 +33,6 @@ router.post('/',async (req, res) => {
             data: {
                 name,
                 price,
-                shop_id,
                 quantity
             },
 
