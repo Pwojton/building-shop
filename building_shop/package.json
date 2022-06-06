@@ -1,0 +1,24 @@
+{
+  "name": "building_shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.14.0",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "lowdb": "^3.0.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "nanoid": "^3.3.4",
+    "prisma": "^3.14.0",
+    "swagger-jsdoc": "^6.2.1",
+    "swagger-ui-express": "^4.4.0"
+  }
+}
