@@ -1,9 +1,9 @@
-const express = require('express'); 
+const express = require('express');
 const cors = require('cors')
 const itemsRouter = require("./routes/items")
 const swaggerUI = require('swagger-ui-express');
 const swaggerJsdoc = require('swagger-jsdoc');
-
+const bodyParser = require('body-parser')
 const PORT = 4000;
 
 
@@ -28,16 +28,18 @@ const options = {
 const specs = swaggerJsdoc(options)
 
 const app = express()
+app.use(express.json())
+app.use(bodyParser.json())
+app.use(cors())
 
 app.use("/api-docs", swaggerUI.serve, swaggerUI.setup(specs))
 
-app.use(express.json())
 
 app.use("/items", itemsRouter)
 
 app.listen(
      PORT,
-     () => console.log(`Listening on http://localhost:${PORT}`)     
+     () => console.log(`Listening on http://localhost:${PORT}`)
 );
 
 
